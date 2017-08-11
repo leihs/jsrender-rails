@@ -5,9 +5,10 @@ module JsrenderRails
     config.jsrender = ActiveSupport::OrderedOptions.new
     config.jsrender.prefix = ""
 
-    initializer "sprockets.jsrender", :after => "sprockets.environment", :group => :all do |app|
-      next unless app.assets
-      app.assets.register_engine(".jsr", Jsrender)
+    config.after_initialize do |app|
+      if app.assets
+        app.assets.register_engine(".jsr", Jsrender)
+      end
     end
   end
 end
