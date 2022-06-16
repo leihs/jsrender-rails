@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "jsrender-rails"
-  s.version     = "2022.06.09"
+  s.version     = "2.0.0-rails-6.0.0"
   s.authors     = ["Sebastian Pape"]
   s.email       = ["email@sebastianpape.com"]
   s.homepage    = "https://github.com/spape/jsrender-rails"
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency 'rails', '5.2.8'
+  s.add_dependency 'rails', '~> 6.0.0'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'capybara'
 end
